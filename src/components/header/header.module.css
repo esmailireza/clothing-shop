@@ -1,0 +1,22 @@
+.iconFavorite {
+  font-size: 1.6rem;
+  margin: 0 1rem;
+  opacity: 0.9;
+}
+.customeContainer {
+  max-width: 1310px;
+  margin: auto;
+}
+.inputSearchCustome {
+  border: none;
+}
+.inputSearchCustome:focus {
+  box-shadow: none;
+  outline: none;
+  border-bottom: 2px solid #ccc;
+}
+.spanSearchCustome {
+  background-color: unset;
+  padding-right: 0.8rem;
+  font-size: 1.6rem;
+}
