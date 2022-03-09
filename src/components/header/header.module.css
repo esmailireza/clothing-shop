@@ -20,3 +20,14 @@
   padding-right: 0.8rem;
   font-size: 1.6rem;
 }
+.linkNav {
+  margin: 0 0.5rem;
+  color: black;
+}
+.linkNav:hover {
+  text-decoration: none;
+  color: #ff9500;
+}
+.activeLink {
+  color: #ff9500;
+}
