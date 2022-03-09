@@ -4,6 +4,7 @@ import { MdShoppingCart } from "react-icons/md";
 import { MdOutlineSearch } from "react-icons/md";
 
 import styles from "./header.module.css";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -11,9 +12,9 @@ const Header = () => {
       <div class="row">
         <div class="col-sm-12">
           <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand">
+            <NavLink to="/" class="navbar-brand">
               <img src={logo} width={150} />
-            </a>
+            </NavLink>
             <button
               class="navbar-toggler"
               type="button"
@@ -28,31 +29,33 @@ const Header = () => {
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                  <a class="nav-link text-dark">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-dark">Shop</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a
-                    class="nav-link dropdown-toggle text-dark"
-                    id="navbarDropdown"
-                    role="button"
-                    data-toggle="dropdown"
-                    aria-expanded="false"
+                <li>
+                  <NavLink
+                    to="/"
+                    className={styles.linkNav}
+                    activeClassName={styles.activeLink}
+                    exact
                   >
-                    About
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item">Action</a>
-                    <a class="dropdown-item">Another action</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item">Something else here</a>
-                  </div>
+                    Home
+                  </NavLink>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link text-dark">Contact</a>
+                <li>
+                  <NavLink
+                    to="/shop"
+                    className={styles.linkNav}
+                    activeClassName={styles.activeLink}
+                  >
+                    Shop
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    to="/contact"
+                    className={styles.linkNav}
+                    activeClassName={styles.activeLink}
+                  >
+                    Contact
+                  </NavLink>
                 </li>
               </ul>
 
