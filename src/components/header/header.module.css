@@ -1,7 +1,21 @@
 .iconFavorite {
   font-size: 1.6rem;
-  margin: 0 1rem;
   opacity: 0.9;
+}
+
+.divIcon {
+  width: 2.8rem;
+  height: 2.8rem;
+  display: inline-block;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 200ms;
+}
+.divIcon:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+  cursor: pointer;
 }
 .customeContainer {
   max-width: 1310px;

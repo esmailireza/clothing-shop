@@ -80,10 +80,12 @@ const Header = () => {
                   />
                 </div>
               </div>
-
-              <MdFavoriteBorder className={styles.iconFavorite} />
-
-              <MdShoppingCart className={styles.iconFavorite} />
+              <div className={styles.divIcon}>
+                <MdFavoriteBorder className={styles.iconFavorite} />
+              </div>
+              <div className={styles.divIcon}>
+                <MdShoppingCart className={styles.iconFavorite} />
+              </div>
             </div>
           </nav>
         </div>
