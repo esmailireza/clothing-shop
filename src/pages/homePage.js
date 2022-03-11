@@ -1,7 +1,7 @@
 import Layout from "../layout/layout";
-import slider1 from "../assets/images/slider img/slide-01.jpg";
-import slider2 from "../assets/images/slider img/slide-02.jpg";
-import slider3 from "../assets/images/slider img/slide-03.jpg";
+import slider1 from "../assets/images/slide/slide-01.jpg";
+import slider2 from "../assets/images/slide/slide-02.jpg";
+import slider3 from "../assets/images/slide/slide-03.jpg";
 import "./slider.css";
 const HomePage = () => {
   return (
