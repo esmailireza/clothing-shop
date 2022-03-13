@@ -13,7 +13,7 @@ const Header = () => {
         <div class="col-sm-12">
           <nav class="navbar navbar-expand-lg navbar-light">
             <NavLink to="/" class="navbar-brand">
-              <img src={logo} width={150} />
+              <img src={logo} width={150} alt="logo" />
             </NavLink>
             <button
               class="navbar-toggler"
@@ -83,8 +83,11 @@ const Header = () => {
               <div className={styles.divIcon}>
                 <MdFavoriteBorder className={styles.iconFavorite} />
               </div>
+
               <div className={styles.divIcon}>
-                <MdShoppingCart className={styles.iconFavorite} />
+                <NavLink to="/cart">
+                  <MdShoppingCart className={styles.iconFavorite} />
+                </NavLink>
               </div>
             </div>
           </nav>
