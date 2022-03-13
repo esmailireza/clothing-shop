@@ -1,7 +1,13 @@
 import Layout from "../../layout/layout";
 import * as data from "../../data";
 import styles from "./shop.module.css";
+import { useCart, useCartActions } from "../../providers/cartProvider";
 const Shop = () => {
+  const dispatch = useCartActions();
+  const addProductHandler = (product) => {
+    /* console.log(product); */
+    dispatch({ type: "ADD_TO_CART", payload: product });
+  };
   return (
     <Layout>
       <main class="container" className={styles.customeContainer}>
@@ -9,23 +15,26 @@ const Shop = () => {
           <div className="d-flex flex-wrap col-sm-12">
             {data.products.map((product) => {
               return (
-                <div className={`card ${styles.cardLayout}`}>
+                <div className={`card ${styles.cardLayout}`} key={product.id}>
                   <img
                     src={product.image}
-                    class="card-img-top"
                     alt={product.name}
-                    className={styles.cardImage}
+                    className={`card-img-top ${styles.cardImage}`}
                   />
-                  <div class="card-body">
-                    <h5 class="card-title">{product.name}</h5>
-                    <p class="card-text">{product.description}</p>
+                  <div className="card-body">
+                    <h5 className="card-title">{product.name}</h5>
+                    <p className="card-text">{product.description}</p>
                     <div className="d-flex justify-content-between align-items-center">
                       <span className="font-weight-bold">
                         $ {product.price}
                       </span>
-                      <a href="#" class="btn btn-primary">
+                      <button
+                        onClick={() => addProductHandler(product)}
+                        href="#"
+                        className="btn btn-primary"
+                      >
                         Add To Cart
-                      </a>
+                      </button>
                     </div>
                   </div>
                 </div>
