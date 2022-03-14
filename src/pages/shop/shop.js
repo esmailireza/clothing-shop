@@ -2,7 +2,9 @@ import Layout from "../../layout/layout";
 import * as data from "../../data";
 import styles from "./shop.module.css";
 import { useCart, useCartActions } from "../../providers/cartProvider";
+import { CheckInCart } from "../../utils/checkInCart";
 const Shop = () => {
+  const cartCheck = useCart();
   const dispatch = useCartActions();
   const addProductHandler = (product) => {
     /* console.log(product); */
@@ -33,7 +35,9 @@ const Shop = () => {
                         href="#"
                         className="btn btn-primary"
                       >
-                        Add To Cart
+                        {CheckInCart(cartCheck.cart, product)
+                          ? "In cart"
+                          : "Add To Cart"}
                       </button>
                     </div>
                   </div>
