@@ -5,8 +5,10 @@ import { MdOutlineSearch } from "react-icons/md";
 
 import styles from "./header.module.css";
 import { NavLink } from "react-router-dom";
+import { useCart } from "../../providers/cartProvider";
 
 const Header = () => {
+  const cartLength = useCart();
   return (
     <div class="container" className={styles.customeContainer}>
       <div class="row">
@@ -87,6 +89,9 @@ const Header = () => {
               <div className={styles.divIcon}>
                 <NavLink to="/cart">
                   <MdShoppingCart className={styles.iconFavorite} />
+                  <span className={styles.lengthProduct}>
+                    {cartLength.cart.length}
+                  </span>
                 </NavLink>
               </div>
             </div>

@@ -1,6 +1,7 @@
 .iconFavorite {
   font-size: 1.6rem;
   opacity: 0.9;
+  position: relative;
 }
 
 .divIcon {
@@ -44,4 +45,15 @@
 }
 .activeLink {
   color: #ff9500;
+}
+.lengthProduct {
+  position: absolute;
+  right: 13px;
+  top: 13px;
+  background-color: #3769da;
+  color: white;
+  width: 21px;
+  height: 22px;
+  border-radius: 50%;
+  font-size: 0.9rem;
 }
