@@ -6,9 +6,9 @@ import { BiTrash } from "react-icons/bi";
 const CartPage = () => {
   const cartState = useCart();
   const cartDispatch = useCartActions();
-  /* const onDecrement = (itemId) => {
-    cartDispatch({ type: "Decrement", id: itemId.id });
-  }; */
+  const originalTotalPrice = cartState.cart.length
+    ? cartState.cart.reduce((acc, curr) => acc + curr.quantity * curr.price, 0)
+    : 0;
   const onIncrement = (item) => {
     cartDispatch({ type: "ADD_TO_CART", payload: item });
   };
@@ -24,7 +24,11 @@ const CartPage = () => {
               return (
                 <div key={item.id} className="cartItem mt-4">
                   <div className="cartItemDesAndImg">
-                    <img src={item.image} className="cartItemImage" />
+                    <img
+                      src={item.image}
+                      className="cartItemImage"
+                      alt={item.name}
+                    />
                     <div className="cartItemDescription">
                       <h2>{item.name}</h2>
                       <p>{item.description}</p>
@@ -54,11 +58,16 @@ const CartPage = () => {
             <p>no item in cart!</p>
           )}
         </section>
+
         <section className="col-sm-4 py-4 h-50 bg-light">
           <h2>price total</h2>
-          <p>subTotal: $ {cartState.total}</p>
+          <p>subTotal: $ {originalTotalPrice}</p>
           <p>
-            Product Discounts:<span className="text-danger"> $0</span>{" "}
+            Product Discounts:
+            <span className="text-danger">
+              {" "}
+              $ {Math.round(originalTotalPrice - cartState.total)}
+            </span>{" "}
           </p>
           <h4>Total: $ {cartState.total}</h4>
           <button type="button" class="btn btn-primary w-100 mt-4">
