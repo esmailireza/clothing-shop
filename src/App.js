@@ -4,10 +4,13 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Shop from "./pages/shop/shop";
 import CartProvider from "./providers/cartProvider";
 import CartPage from "./pages/cartPage";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 function App() {
   return (
     <Router>
       <CartProvider>
+        <ToastContainer />
         <div className="App">
           <Switch>
             <Route path="/cart" component={CartPage} />

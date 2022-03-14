@@ -3,11 +3,13 @@ import * as data from "../../data";
 import styles from "./shop.module.css";
 import { useCart, useCartActions } from "../../providers/cartProvider";
 import { CheckInCart } from "../../utils/checkInCart";
+import { toast } from "react-toastify";
 const Shop = () => {
   const cartCheck = useCart();
   const dispatch = useCartActions();
   const addProductHandler = (product) => {
     /* console.log(product); */
+    toast.success(`${product.name} Added to cart`);
     dispatch({ type: "ADD_TO_CART", payload: product });
   };
   return (
