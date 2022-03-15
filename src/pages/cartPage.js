@@ -2,6 +2,7 @@ import Layout from "../layout/layout";
 import { useCart, useCartActions } from "../providers/cartProvider";
 import "./cartPage.css";
 import { BiTrash } from "react-icons/bi";
+import { Link } from "react-router-dom";
 
 const CartPage = () => {
   const cartState = useCart();
@@ -71,7 +72,9 @@ const CartPage = () => {
           </p>
           <h4>Total: $ {cartState.total}</h4>
           <button type="button" class="btn btn-primary w-100 mt-4">
-            Continue Ordering
+            <Link to="/checkout" className="text-white text-decoration-none">
+              Go to checkout
+            </Link>
           </button>
         </section>
       </main>
