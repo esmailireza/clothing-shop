@@ -1,0 +1,35 @@
+.inputForm[type="text"],
+.inputForm[type="email"],
+.inputForm[type="tel"],
+.inputForm[type="password"] {
+  width: 400px;
+  padding: 6px 12px;
+  display: block;
+  background-color: #fff;
+  color: #444;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.inputForm:focus {
+  outline: none;
+  border: 2px solid #3769da;
+}
+label {
+  display: flex;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+input + label {
+  font-weight: 600;
+  display: inline-flex;
+  margin-right: 20px;
+  margin-left: 5px;
+}
+.formControl {
+  margin-bottom: 20px;
+}
+.error {
+  color: red;
+  text-align: left;
+}
