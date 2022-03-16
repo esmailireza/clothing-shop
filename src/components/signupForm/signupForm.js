@@ -2,6 +2,7 @@ import { useFormik } from "formik";
 import Input from "../../common/input";
 import * as Yup from "yup";
 import styles from "./signup.module.css";
+import { Link } from "react-router-dom";
 const onSubmit = (values) => {
   console.log(values);
   /* axios
@@ -29,7 +30,12 @@ const SignupForm = () => {
         .required("phone Number is required")
         .matches(/^[0-9]{11}$/, "invalid phone number")
         .nullable(),
-      password: Yup.string().required("password is required"),
+      password: Yup.string()
+        .required("password is required")
+        .matches(
+          /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/,
+          `Must contains 8 Characters, one uppercase, one lowercase, one number and one special case character`
+        ),
       passwordConfirm: Yup.string()
         .required("passwordConfirm is required")
         .oneOf([Yup.ref("password"), null], "passwords must match"),
@@ -60,8 +66,14 @@ const SignupForm = () => {
         className={styles.button}
         disabled={!formik.isValid}
       >
-        Submit
+        Signup
       </button>
+      <Link
+        to="/loginPage"
+        className={`text-start mt-2 text-decoration-none ${styles.headToLogin}`}
+      >
+        <p className="text-decoration-none">Already have an account? Sign in</p>
+      </Link>
     </form>
   );
 };
