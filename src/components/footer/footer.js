@@ -2,6 +2,11 @@ import styles from "./footer.module.css";
 import { makeStyles } from "@mui/styles";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
+import iconPayOne from "../../assets/images/icons/icon-pay-01.png";
+import iconPayTwo from "../../assets/images/icons/icon-pay-02.png";
+import iconPayThree from "../../assets/images/icons/icon-pay-03.png";
+import iconPayFour from "../../assets/images/icons/icon-pay-04.png";
+import iconPayFive from "../../assets/images/icons/icon-pay-05.png";
 
 import {
   FaFacebookSquare,
@@ -11,15 +16,15 @@ import {
 } from "react-icons/fa";
 
 const useStyles = makeStyles({
-  buttonStyle: {
+  /*  buttonStyle: {
     backgroundColor: "#717fe0",
     borderRadius: "25px",
     marginTop: "35px",
     marginBottom: "1px",
-  },
+  }, */
 });
 const Footer = () => {
-  const classes = useStyles();
+  /*  const classes = useStyles(); */
   return (
     <footer className={`container-fluid py-4 ${styles.bgFooter} }`}>
       <div className="row">
@@ -87,7 +92,6 @@ const Footer = () => {
           <section className="col-sm-3">
             <h4 className={`text-white ${styles.titleList}`}>NEWSLETTER</h4>
             <TextField
-              /* className={classes.root} */
               id="standard-textarea"
               label="Email"
               InputLabelProps={{ style: { color: "#b2b2b2" } }}
@@ -102,7 +106,8 @@ const Footer = () => {
               variant="standard"
             />
             <Button
-              className={styles.buttonStyle}
+              style={{ marginTop: "35px", borderRadius: "25px" }}
+              /* className={classes.buttonStyle} */
               fullWidth
               variant="contained"
               color="primary"
@@ -111,6 +116,20 @@ const Footer = () => {
             </Button>
           </section>
         </div>
+      </div>
+      <div style={{ paddingTop: "20px" }}>
+        <img src={iconPayOne} />
+        <img src={iconPayTwo} />
+        <img src={iconPayThree} />
+        <img src={iconPayFour} />
+        <img src={iconPayFive} />
+      </div>
+      <div
+        /* className={classes.TextDifferentColor} */
+        style={{ textAlign: "center", paddingTop: "20px", color: "#b2b2b2" }}
+      >
+        Copyright ©2022 All rights reserved | Developed By
+        <span className="text-primary"> Reza Esmaili</span>
       </div>
     </footer>
   );
