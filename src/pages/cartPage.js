@@ -22,10 +22,10 @@ const CartPage = () => {
     <Layout>
       <main className="container marginMainCart">
         {cartState.cart.length ? (
-          cartState.cart.map((item) => {
-            return (
-              <div className=" col-sm-12 d-flex justify-content-between mt-5">
-                <section className="col-sm-8">
+          <div className=" col-sm-12 d-flex justify-content-between mt-5">
+            <section className="col-sm-8 mb-5">
+              {cartState.cart.map((item) => (
+                <section>
                   <div key={item.id} className="cartItem mt-4">
                     <div className="cartItemDesAndImg">
                       <img
@@ -61,29 +61,29 @@ const CartPage = () => {
                     </div>
                   </div>
                 </section>
-                <section className="col-sm-4 py-4 h-50 bg-light">
-                  <h2>price total</h2>
-                  <p>subTotal: $ {originalTotalPrice}</p>
-                  <p>
-                    Product Discounts:
-                    <span className="text-danger">
-                      {" "}
-                      $ {Math.round(originalTotalPrice - cartState.total)}
-                    </span>{" "}
-                  </p>
-                  <h4>Total: $ {cartState.total}</h4>
-                  <button type="button" class="btn btn-primary w-100 mt-4">
-                    <Link
-                      to="/checkout"
-                      className="text-white text-decoration-none"
-                    >
-                      Go to checkout
-                    </Link>
-                  </button>
-                </section>
-              </div>
-            );
-          })
+              ))}
+            </section>
+            <section className="col-sm-4 py-4 h-50 bg-light">
+              <h2>price total</h2>
+              <p>subTotal: $ {originalTotalPrice}</p>
+              <p>
+                Product Discounts:
+                <span className="text-danger">
+                  {" "}
+                  $ {Math.round(originalTotalPrice - cartState.total)}
+                </span>{" "}
+              </p>
+              <h4>Total: $ {cartState.total}</h4>
+              <button type="button" class="btn btn-primary w-100 mt-4">
+                <Link
+                  to="/checkout"
+                  className="text-white text-decoration-none"
+                >
+                  Go to checkout
+                </Link>
+              </button>
+            </section>
+          </div>
         ) : (
           <div>
             <MdAddShoppingCart className="cartEmptyIcon mt-4" />
