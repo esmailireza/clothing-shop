@@ -9,6 +9,8 @@ import "react-toastify/dist/ReactToastify.css";
 import Checkout from "./pages/checkout/checkout";
 import SignupPage from "./pages/signupPage";
 import LoginPage from "./pages/loginPage";
+import FavoritePage from "./pages/favoritePage";
+import ProductPage from "./pages/productPage";
 function App() {
   return (
     <Router>
@@ -16,11 +18,13 @@ function App() {
         <ToastContainer />
         <div className="App">
           <Switch>
+            <Route path="/shop/product" component={ProductPage} />
             <Route path="/cart" component={CartPage} />
             <Route path="/shop" component={Shop} />
             <Route path="/checkout" component={Checkout} />
             <Route path="/loginPage" component={LoginPage} />
             <Route path="/signupPage" component={SignupPage} />
+            <Route path="/favorite" component={FavoritePage} />
             <Route path="/" exact={true} component={HomePage} />
           </Switch>
         </div>
