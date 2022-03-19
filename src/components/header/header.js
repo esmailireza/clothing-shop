@@ -83,7 +83,9 @@ const Header = () => {
                 </div>
               </div>
               <div className={styles.divIcon}>
-                <MdFavoriteBorder className={styles.iconFavorite} />
+                <NavLink to="/favorite">
+                  <MdFavoriteBorder className={styles.iconFavorite} />
+                </NavLink>
               </div>
 
               <div className={styles.divIcon}>
