@@ -4,6 +4,7 @@ import styles from "./shop.module.css";
 import { useCart, useCartActions } from "../../providers/cartProvider";
 import { CheckInCart } from "../../utils/checkInCart";
 import { toast } from "react-toastify";
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 const Shop = () => {
   const cartCheck = useCart();
   const dispatch = useCartActions();
@@ -18,8 +19,14 @@ const Shop = () => {
         <div className="row">
           <div className="d-flex flex-wrap col-sm-12">
             {data.products.map((product) => {
+              console.log(data);
               return (
-                <div className={`card ${styles.cardLayout}`} key={product.id}>
+                <Link
+                  to={`/products/${product.name}`}
+                  product={product}
+                  className={`card text-decoration-none text-dark ${styles.cardLayout}`}
+                  key={product.id}
+                >
                   <img
                     src={product.image}
                     alt={product.name}
@@ -43,7 +50,7 @@ const Shop = () => {
                       </button>
                     </div>
                   </div>
-                </div>
+                </Link>
               );
             })}
           </div>
