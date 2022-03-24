@@ -18,7 +18,7 @@ function App() {
         <ToastContainer />
         <div className="App">
           <Switch>
-            <Route path="/shop/product" component={ProductPage} />
+            <Route path="/products/:name" component={ProductPage} />
             <Route path="/cart" component={CartPage} />
             <Route path="/shop" component={Shop} />
             <Route path="/checkout" component={Checkout} />
