@@ -10,7 +10,10 @@ const Shop = () => {
   const dispatch = useCartActions();
   const addProductHandler = (product) => {
     /* console.log(product); */
-    toast.success(`${product.name} Added to cart`);
+    toast.success(`${product.name} Added to cart`, {
+      position: "top-center",
+      autoClose: 3000,
+    });
     dispatch({ type: "ADD_TO_CART", payload: product });
   };
   return (
@@ -19,7 +22,7 @@ const Shop = () => {
         <div className="row">
           <div className="d-flex flex-wrap col-sm-12">
             {data.products.map((product) => {
-              console.log(data);
+              /* console.log(data); */
               return (
                 <Link
                   to={`/products/${product.name}`}
