@@ -28,11 +28,13 @@ const CartPage = () => {
                 <section>
                   <div key={item.id} className="cartItem mt-4">
                     <div className="cartItemDesAndImg">
-                      <img
-                        src={item.image}
-                        className="cartItemImage"
-                        alt={item.name}
-                      />
+                      <Link to={`/products/${item.name}`}>
+                        <img
+                          src={item.image}
+                          className="cartItemImage"
+                          alt={item.name}
+                        />
+                      </Link>
                       <div className="cartItemDescription">
                         <h2>{item.name}</h2>
                         <p>{item.description}</p>
