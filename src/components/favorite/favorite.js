@@ -1,26 +1,27 @@
-import { useCart, useCartActions } from "../../providers/cartProvider";
 import "../../components/favorite/favorite.module.css";
 import { BiTrash } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import { MdOutlineFavoriteBorder } from "react-icons/md";
 import Button from "@mui/material/Button";
+import {
+  useFavorite,
+  useFavoriteActions,
+} from "../../providers/favoriteProvider";
 
 const Favorite = () => {
-  const cartState = useCart();
-  const cartDispatch = useCartActions();
-  const originalTotalPrice = cartState.cart.length
-    ? cartState.cart.reduce((acc, curr) => acc + curr.quantity * curr.price, 0)
-    : 0;
-  const onIncrement = (item) => {
-    cartDispatch({ type: "ADD_TO_CART", payload: item });
-  };
-  const onDecrement = (item) => {
+  const favoriteState = useFavorite();
+  console.log(favoriteState);
+  const favoriteDispatch = useFavoriteActions();
+
+  /* const onDecrement = (item) => {
     cartDispatch({ type: "REMOVE_PRODUCT", payload: item });
-  };
+  }; */
+
   return (
     <main className="container flex-wrap d-flex justify-content-between marginMainCart mb-5">
-      {cartState.cart.length ? (
-        cartState.cart.map((item) => {
+      {favoriteState.favoriteItems.length ? (
+        favoriteState.favoriteItems.map((item) => {
+          console.log(favoriteState);
           return (
             <section className="col-sm-6 mb-2 ">
               <div key={item.id} className="cartItem mt-4">
@@ -33,24 +34,8 @@ const Favorite = () => {
                   <div className="cartItemDescription">
                     <h2>{item.name}</h2>
                     <p>{item.description}</p>
-                    <div>$ {item.price * item.quantity}</div>
+                    <div>$ {item.price}</div>
                   </div>
-                </div>
-                <div>
-                  <button
-                    onClick={() => onDecrement(item)}
-                    className={`button ${item.quantity === 1 && "trashBtn"}`}
-                  >
-                    {item.quantity > 1 ? "-" : <BiTrash />}
-                  </button>
-                  <span /* className={styles.value} */>{item.quantity}</span>
-
-                  <button
-                    onClick={() => onIncrement(item)}
-                    className="button increment"
-                  >
-                    +
-                  </button>
                 </div>
               </div>
             </section>
