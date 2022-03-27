@@ -11,23 +11,26 @@ import SignupPage from "./pages/signupPage";
 import LoginPage from "./pages/loginPage";
 import FavoritePage from "./pages/favoritePage";
 import ProductPage from "./pages/productPage";
+import FavoriteProvider from "./providers/favoriteProvider";
 function App() {
   return (
     <Router>
       <CartProvider>
-        <ToastContainer />
-        <div className="App">
-          <Switch>
-            <Route path="/products/:name" component={ProductPage} />
-            <Route path="/cart" component={CartPage} />
-            <Route path="/shop" component={Shop} />
-            <Route path="/checkout" component={Checkout} />
-            <Route path="/loginPage" component={LoginPage} />
-            <Route path="/signupPage" component={SignupPage} />
-            <Route path="/favorite" component={FavoritePage} />
-            <Route path="/" exact={true} component={HomePage} />
-          </Switch>
-        </div>
+        <FavoriteProvider>
+          <ToastContainer />
+          <div className="App">
+            <Switch>
+              <Route path="/products/:name" component={ProductPage} />
+              <Route path="/cart" component={CartPage} />
+              <Route path="/shop" component={Shop} />
+              <Route path="/checkout" component={Checkout} />
+              <Route path="/loginPage" component={LoginPage} />
+              <Route path="/signupPage" component={SignupPage} />
+              <Route path="/favorite" component={FavoritePage} />
+              <Route path="/" exact={true} component={HomePage} />
+            </Switch>
+          </div>
+        </FavoriteProvider>
       </CartProvider>
     </Router>
   );
