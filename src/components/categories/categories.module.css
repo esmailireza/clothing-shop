@@ -1,0 +1,14 @@
+.customeContainer {
+  max-width: 1310px;
+  margin: auto;
+}
+.categoryHover {
+  border-bottom: 4px solid white;
+}
+.categoryHover:hover {
+  border-bottom: 4px solid #1976d2;
+}
+.descCategory {
+  top: 25px;
+  left: 30px;
+}
