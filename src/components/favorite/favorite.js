@@ -1,21 +1,16 @@
 import "../../components/favorite/favorite.module.css";
-import { BiTrash } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import { MdOutlineFavoriteBorder } from "react-icons/md";
 import Button from "@mui/material/Button";
 import {
   useFavorite,
-  useFavoriteActions,
+  /* useFavoriteActions, */
 } from "../../providers/favoriteProvider";
 
 const Favorite = () => {
   const favoriteState = useFavorite();
   console.log(favoriteState);
-  const favoriteDispatch = useFavoriteActions();
-
-  /* const onDecrement = (item) => {
-    cartDispatch({ type: "REMOVE_PRODUCT", payload: item });
-  }; */
+  /* const favoriteDispatch = useFavoriteActions(); */
 
   return (
     <main className="container flex-wrap d-flex justify-content-between marginMainCart mb-5">

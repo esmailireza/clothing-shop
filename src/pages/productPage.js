@@ -9,22 +9,49 @@ import { CheckInCart } from "../utils/checkInCart";
 import { BiTrash } from "react-icons/bi";
 import { BiShareAlt } from "react-icons/bi";
 import { useState } from "react";
+import { useFavoriteActions } from "../providers/favoriteProvider";
 
 const ProductPage = () => {
   const { name } = useParams();
   const profile = data.products.filter((profile) => profile.name === name);
   const cartCheck = useCart();
-  const dispatch = useCartActions();
+  /* const dispatch = useCartActions(); */
+  const dispatchFavorite = useFavoriteActions();
   const cartDispatch = useCartActions();
-  const [click, setClick] = useState(false);
-  const handleClick = () => setClick(!click);
+  const [favoritesStatus, setFavoritesStatus] = useState("Removed");
+  /* const [click, setClick] = useState(false);
+  /* console.log(click); */
+  const favoriteHandler = (pr) => {
+    console.log(pr);
+
+    if (favoritesStatus === "Removed") {
+      dispatchFavorite({ type: "ADD_TO_FAVORITE", payload: pr });
+      /* dispatch(ADD_TO_FAVORITES_ACTION(product)) */
+      setFavoritesStatus("Added");
+      /* Toast.fire({
+        animation: true,
+        title: 'Product Added To Favorites',
+      }) */
+    }
+    if (favoritesStatus === "Added") {
+      dispatchFavorite({ type: "REMOVE_FROM_FAVORITE", payload: pr });
+      /* dispatch(REMOVE_FROM_FAVORITES_ACTION(product)) */
+      setFavoritesStatus("Removed");
+      /* Toast.fire({
+        animation: true,
+        title: 'Product Removed From Favorites',
+      }) */
+    }
+
+    /* setClick(!click); */
+  };
   const addProductHandler = (product) => {
     /* console.log(product); */
     toast.success(`${product.name} Added to cart`, {
       position: "top-center",
       autoClose: 3000,
     });
-    dispatch({ type: "ADD_TO_CART", payload: product });
+    cartDispatch({ type: "ADD_TO_CART", payload: product });
   };
   const onDecrement = (item) => {
     cartDispatch({ type: "REMOVE_PRODUCT", payload: item });
@@ -36,7 +63,7 @@ const ProductPage = () => {
     <Layout>
       {profile.map((pr) => {
         return (
-          <main>
+          <main key={pr.id}>
             <div
               key={pr.id}
               className={`d-flex justify-content-center ${styles.customContainer}`}
@@ -64,15 +91,28 @@ const ProductPage = () => {
                   </button>
                 )}
                 <div className="mt-3 d-flex justify-content-center w-100">
-                  <div className={styles.divIcon} onClick={handleClick}>
-                    <i
-                      class="far fa-heart"
-                      className={click ? "far fa-heart" : "fa-solid fa-heart"}
-                      style={{
-                        fontSize: "1.5rem",
-                        color: "rgb(139 139 139)",
-                      }}
-                    ></i>
+                  <div className={styles.divIcon}>
+                    {favoritesStatus === "Removed" ? (
+                      <i
+                        onClick={() => favoriteHandler(pr)}
+                        class="far fa-heart"
+                        /* className={click ? "fa-solid fa-heart" : "far fa-heart"} */
+                        style={{
+                          fontSize: "1.5rem",
+                          color: "rgb(139 139 139)",
+                        }}
+                      ></i>
+                    ) : (
+                      <i
+                        onClick={() => favoriteHandler(pr)}
+                        class="fa-solid fa-heart"
+                        /* className={click ? "fa-solid fa-heart" : "far fa-heart"} */
+                        style={{
+                          fontSize: "1.5rem",
+                          color: "rgb(139 139 139)",
+                        }}
+                      ></i>
+                    )}
                   </div>
                   <div className={styles.divIcon}>
                     <BiShareAlt
