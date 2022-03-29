@@ -3,6 +3,8 @@ import Input from "../../common/input";
 import * as Yup from "yup";
 import styles from "./signup.module.css";
 import { Link } from "react-router-dom";
+import logo from "../../assets/images/amazon-logo.png";
+
 const onSubmit = (values) => {
   console.log(values);
   /* axios
@@ -45,36 +47,51 @@ const SignupForm = () => {
     onSubmit,
   });
   return (
-    <form className={styles.formContainer} onSubmit={formik.handleSubmit}>
-      <Input label="name" name="name" formik={formik} />
-      <Input label="email" name="email" formik={formik} type="email" />
-      <Input
-        label="phoneNumber"
-        name="phoneNumber"
-        formik={formik}
-        type="tel"
-      />
-      <Input label="password" name="password" formik={formik} type="password" />
-      <Input
-        label="passwordConfirm"
-        name="passwordConfirm"
-        formik={formik}
-        type="password"
-      />
-      <button
-        type="submit"
-        className={styles.button}
-        disabled={!formik.isValid}
-      >
-        Signup
-      </button>
-      <Link
-        to="/loginPage"
-        className={`text-start mt-2 text-decoration-none ${styles.headToLogin}`}
-      >
-        <p className="text-decoration-none">Already have an account? Sign in</p>
+    <main className="d-flex flex-column">
+      <Link to="/">
+        <img src={logo} className={styles.logoSignup} />
       </Link>
-    </form>
+      <form className={styles.formContainer} onSubmit={formik.handleSubmit}>
+        <div className={styles.textAlign}>
+          <h3>Create account</h3>
+        </div>
+        <Input label="name" name="name" formik={formik} />
+        <Input label="email" name="email" formik={formik} type="email" />
+        <Input
+          label="phoneNumber"
+          name="phoneNumber"
+          formik={formik}
+          type="tel"
+        />
+        <Input
+          label="password"
+          name="password"
+          formik={formik}
+          type="password"
+        />
+        <Input
+          label="passwordConfirm"
+          name="passwordConfirm"
+          formik={formik}
+          type="password"
+        />
+        <button
+          type="submit"
+          className={styles.button}
+          disabled={!formik.isValid}
+        >
+          Signup
+        </button>
+        <Link
+          to="/loginPage"
+          className={`text-start mt-2 text-decoration-none ${styles.headToLogin}`}
+        >
+          <p className="text-decoration-none">
+            Already have an account? Sign in
+          </p>
+        </Link>
+      </form>
+    </main>
   );
 };
 
