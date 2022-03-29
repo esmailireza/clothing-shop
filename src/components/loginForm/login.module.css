@@ -1,8 +1,16 @@
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
 .formContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border: 1px solid #e0e0e2;
+  padding: 2rem;
 }
 .button {
   padding: 5px 15px;
@@ -20,4 +28,13 @@
 .headToSignup {
   width: 400px;
   text-align: left;
+}
+.formContainer .textAlign {
+  text-align: left;
+  width: 100%;
+  padding-bottom: 1rem;
+}
+.logoLogin {
+  width: 140px;
+  margin-bottom: 1.5rem;
 }
