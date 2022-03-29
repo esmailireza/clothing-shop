@@ -44,6 +44,7 @@ export const products = [
     price: 70,
     offPrice: 66.5,
     discount: 5,
+    type: "bag",
   },
   {
     id: "bag_product_2",
@@ -53,6 +54,7 @@ export const products = [
     price: 90,
     offPrice: 82.8,
     discount: 8,
+    type: "bag",
   },
   {
     id: "bag_product_3",
@@ -62,6 +64,7 @@ export const products = [
     price: 135,
     offPrice: 108,
     discount: 20,
+    type: "bag",
   },
   {
     id: "bag_product_4",
@@ -71,6 +74,7 @@ export const products = [
     price: 110,
     offPrice: 88,
     discount: 20,
+    type: "bag",
   },
   {
     id: "bag_product_5",
@@ -80,6 +84,7 @@ export const products = [
     price: 115,
     offPrice: 115,
     discount: 0,
+    type: "bag",
   },
   {
     id: "man_product_1",
@@ -89,6 +94,7 @@ export const products = [
     price: 110,
     offPrice: 110,
     discount: 0,
+    type: "man",
   },
   {
     id: "man_product_2",
@@ -98,6 +104,7 @@ export const products = [
     price: 95,
     offPrice: 95,
     discount: 0,
+    type: "man",
   },
   {
     id: "man_product_3",
@@ -107,6 +114,7 @@ export const products = [
     price: 165,
     offPrice: 138,
     discount: 16,
+    type: "man",
   },
   {
     id: "man_product_4",
@@ -116,6 +124,7 @@ export const products = [
     price: 140,
     offPrice: 117,
     discount: 16,
+    type: "man",
   },
   {
     id: "man_product_5",
@@ -125,6 +134,7 @@ export const products = [
     price: 80,
     offPrice: 67,
     discount: 16,
+    type: "man",
   },
   {
     id: "man_product_6",
@@ -134,6 +144,7 @@ export const products = [
     price: 120,
     offPrice: 60,
     discount: 50,
+    type: "man",
   },
   {
     id: "man_product_7",
@@ -143,6 +154,7 @@ export const products = [
     price: 75,
     offPrice: 37.5,
     discount: 50,
+    type: "man",
   },
   {
     id: "man_product_8",
@@ -152,6 +164,7 @@ export const products = [
     price: 210,
     offPrice: 105.5,
     discount: 50,
+    type: "man",
   },
   {
     id: "man_product_9",
@@ -161,6 +174,7 @@ export const products = [
     price: 90,
     offPrice: 45,
     discount: 50,
+    type: "man",
   },
   {
     id: "shoes_product_1",
@@ -170,6 +184,7 @@ export const products = [
     price: 95,
     offPrice: 90,
     discount: 0,
+    type: "shoes",
   },
   {
     id: "shoes_product_2",
@@ -179,6 +194,7 @@ export const products = [
     price: 90,
     offPrice: 90,
     discount: 0,
+    type: "shoes",
   },
   {
     id: "shoes_product_3",
@@ -188,6 +204,7 @@ export const products = [
     price: 95,
     offPrice: 95,
     discount: 0,
+    type: "shoes",
   },
   {
     id: "shoes_product_4",
@@ -197,6 +214,7 @@ export const products = [
     price: 120,
     offPrice: 84,
     discount: 30,
+    type: "shoes",
   },
   {
     id: "shoes_product_5",
@@ -206,6 +224,7 @@ export const products = [
     price: 100,
     offPrice: 70,
     discount: 30,
+    type: "shoes",
   },
   {
     id: "watch_product_1",
@@ -215,6 +234,7 @@ export const products = [
     price: 90,
     offPrice: 63,
     discount: 30,
+    type: "watch",
   },
   {
     id: "watch_product_2",
@@ -224,6 +244,7 @@ export const products = [
     price: 85,
     offPrice: 59.5,
     discount: 30,
+    type: "watch",
   },
   {
     id: "watch_product_3",
@@ -233,6 +254,7 @@ export const products = [
     price: 220,
     offPrice: 220,
     discount: 0,
+    type: "watch",
   },
   {
     id: "watch_product_4",
@@ -242,6 +264,7 @@ export const products = [
     price: 95,
     offPrice: 95,
     discount: 0,
+    type: "watch",
   },
   {
     id: "watch_product_5",
@@ -251,6 +274,7 @@ export const products = [
     price: 225,
     offPrice: 225,
     discount: 0,
+    type: "watch",
   },
   {
     id: "watch_product_6",
@@ -260,6 +284,7 @@ export const products = [
     price: 205,
     offPrice: 205,
     discount: 0,
+    type: "watch",
   },
   {
     id: "woman_product_1",
@@ -269,6 +294,7 @@ export const products = [
     price: 105,
     offPrice: 63,
     discount: 40,
+    type: "women",
   },
   {
     id: "woman_product_2",
@@ -278,6 +304,7 @@ export const products = [
     price: 120,
     offPrice: 72,
     discount: 40,
+    type: "women",
   },
   {
     id: "woman_product_3",
@@ -287,6 +314,7 @@ export const products = [
     price: 85,
     offPrice: 51,
     discount: 40,
+    type: "women",
   },
   {
     id: "woman_product_4",
@@ -296,6 +324,7 @@ export const products = [
     price: 90,
     offPrice: 54,
     discount: 40,
+    type: "women",
   },
   {
     id: "woman_product_5",
@@ -305,6 +334,7 @@ export const products = [
     price: 135,
     offPrice: 81,
     discount: 40,
+    type: "women",
   },
   {
     id: "woman_product_6",
@@ -314,6 +344,7 @@ export const products = [
     price: 70,
     offPrice: 70,
     discount: 0,
+    type: "women",
   },
   {
     id: "woman_product_7",
@@ -323,6 +354,7 @@ export const products = [
     price: 220,
     offPrice: 220,
     discount: 0,
+    type: "women",
   },
   {
     id: "woman_product_8",
@@ -332,6 +364,7 @@ export const products = [
     price: 160,
     offPrice: 160,
     discount: 0,
+    type: "women",
   },
   {
     id: "woman_product_9",
@@ -341,6 +374,7 @@ export const products = [
     price: 180,
     offPrice: 180,
     discount: 0,
+    type: "women",
   },
   {
     id: "woman_product_10",
@@ -350,6 +384,7 @@ export const products = [
     price: 145,
     offPrice: 145,
     discount: 0,
+    type: "women",
   },
   {
     id: "woman_product_11",
@@ -359,5 +394,6 @@ export const products = [
     price: 200,
     offPrice: 200,
     discount: 0,
+    type: "women",
   },
 ];
