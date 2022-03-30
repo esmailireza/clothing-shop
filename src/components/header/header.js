@@ -1,5 +1,6 @@
 import logo from "../../assets/images/amazon-logo.png";
 import { MdFavoriteBorder } from "react-icons/md";
+import { MdLogin } from "react-icons/md";
 import { MdShoppingCart } from "react-icons/md";
 import { MdOutlineSearch } from "react-icons/md";
 
@@ -81,6 +82,11 @@ const Header = () => {
                     aria-describedby="basic-addon1"
                   />
                 </div>
+              </div>
+              <div className={styles.divIcon}>
+                <NavLink to="/loginPage">
+                  <MdLogin className={styles.iconFavorite} />
+                </NavLink>
               </div>
               <div className={styles.divIcon}>
                 <NavLink to="/favorite">
