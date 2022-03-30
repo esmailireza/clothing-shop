@@ -47,7 +47,7 @@ const SignupForm = () => {
     onSubmit,
   });
   return (
-    <main className="d-flex flex-column">
+    <div className={`d-flex flex-column ${styles.wrapper}`}>
       <Link to="/">
         <img src={logo} className={styles.logoSignup} alt="amazon" />
       </Link>
@@ -91,7 +91,7 @@ const SignupForm = () => {
           </p>
         </Link>
       </form>
-    </main>
+    </div>
   );
 };
 
