@@ -1,5 +1,4 @@
 import styles from "./footer.module.css";
-import { makeStyles } from "@mui/styles";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import iconPayOne from "../../assets/images/icons/icon-pay-01.png";
@@ -14,15 +13,8 @@ import {
   FaLinkedin,
   FaTwitter,
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
-const useStyles = makeStyles({
-  /*  buttonStyle: {
-    backgroundColor: "#717fe0",
-    borderRadius: "25px",
-    marginTop: "35px",
-    marginBottom: "1px",
-  }, */
-});
 const Footer = () => {
   /*  const classes = useStyles(); */
   return (
@@ -35,16 +27,24 @@ const Footer = () => {
             <h4 className={`text-white ${styles.titleList}`}>CATEGORIES</h4>
             <ul className={styles.colorList}>
               <li>
-                <a>Women</a>
+                <Link to="" className="text-reset text-decoration-none">
+                  Women
+                </Link>
               </li>
               <li>
-                <a>Men</a>
+                <Link to="" className="text-reset text-decoration-none">
+                  Men
+                </Link>
               </li>
               <li>
-                <a>Shoes</a>
+                <Link to="" className="text-reset text-decoration-none">
+                  Shoes
+                </Link>
               </li>
               <li>
-                <a>Watches</a>
+                <Link to="" className="text-reset text-decoration-none">
+                  Watches
+                </Link>
               </li>
             </ul>
           </section>
@@ -52,16 +52,24 @@ const Footer = () => {
             <h4 className={`text-white ${styles.titleList}`}>HELP</h4>
             <ul className={styles.colorList}>
               <li>
-                <a>Track Order</a>
+                <Link to="" className="text-reset text-decoration-none">
+                  Track Order
+                </Link>
               </li>
               <li>
-                <a>Returns</a>
+                <Link to="" className="text-reset text-decoration-none">
+                  Returns
+                </Link>
               </li>
               <li>
-                <a>Shipping</a>
+                <Link to="" className="text-reset text-decoration-none">
+                  Shipping
+                </Link>
               </li>
               <li>
-                <a>FAQs</a>
+                <Link to="" className="text-reset text-decoration-none">
+                  FAQs
+                </Link>
               </li>
             </ul>
           </section>
@@ -118,11 +126,11 @@ const Footer = () => {
         </div>
       </div>
       <div style={{ paddingTop: "20px" }}>
-        <img src={iconPayOne} />
-        <img src={iconPayTwo} />
-        <img src={iconPayThree} />
-        <img src={iconPayFour} />
-        <img src={iconPayFive} />
+        <img src={iconPayOne} alt="PayPal" />
+        <img src={iconPayTwo} alt="VISA" />
+        <img src={iconPayThree} alt="pay3" />
+        <img src={iconPayFour} alt="pay4" />
+        <img src={iconPayFive} alt="pay5" />
       </div>
       <div
         /* className={classes.TextDifferentColor} */
