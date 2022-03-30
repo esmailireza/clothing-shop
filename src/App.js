@@ -6,7 +6,7 @@ import CartProvider from "./providers/cartProvider";
 import CartPage from "./pages/cartPage";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Checkout from "./pages/checkout/checkout";
+import CheckoutPage from "./pages/checkout/checkoutPage";
 import SignupPage from "./pages/signupPage";
 import LoginPage from "./pages/loginPage";
 import FavoritePage from "./pages/favoritePage";
@@ -23,7 +23,7 @@ function App() {
               <Route path="/products/:name" component={ProductPage} />
               <Route path="/cart" component={CartPage} />
               <Route path="/shop" component={Shop} />
-              <Route path="/checkout" component={Checkout} />
+              <Route path="/checkout" component={CheckoutPage} />
               <Route path="/loginPage" component={LoginPage} />
               <Route path="/signupPage" component={SignupPage} />
               <Route path="/favorite" component={FavoritePage} />
