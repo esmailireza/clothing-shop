@@ -1,7 +1,7 @@
 .customContainer {
   max-width: 1340px;
 }
-main {
+.section {
   min-height: 70vh;
   margin-top: 2rem;
 }

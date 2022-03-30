@@ -31,7 +31,7 @@ const LoginForm = () => {
   return (
     <main className="d-flex flex-column">
       <Link to="/">
-        <img src={logo} className={styles.logoLogin} />
+        <img src={logo} className={styles.logoLogin} alt="amazon" />
       </Link>
       <form className={styles.formContainer} onSubmit={formik.handleSubmit}>
         <div className={styles.textAlign}>
