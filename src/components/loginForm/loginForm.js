@@ -4,14 +4,18 @@ import * as Yup from "yup";
 import Input from "../../common/input";
 import styles from "./login.module.css";
 import logo from "../../assets/images/amazon-logo.png";
+import { useHistory } from "react-router-dom";
 const LoginForm = () => {
+  const history = useHistory();
   const onSubmit = (values) => {
-    console.log(values);
+    console.log(history);
+    history.push("/");
     /* axios
             .post("http://localhost:3001/users", values)
             .then((res) => res.data)
             .catch((err) => console.log(err)); */
   };
+
   const formik = useFormik({
     initialValues: {
       email: "",
