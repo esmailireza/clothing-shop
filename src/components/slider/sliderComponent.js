@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import slider1 from "../../assets/images/slide/slide-01.jpg";
 import slider2 from "../../assets/images/slide/slide-02.jpg";
 import slider3 from "../../assets/images/slide/slide-03.jpg";
@@ -22,9 +23,9 @@ const Slider = () => {
             </ol>
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <a href="#">
+                <Link to="#">
                   <img src={slider1} class="d-block w-100" alt="..." />
-                </a>
+                </Link>
                 <div class="carousel-caption d-none d-md-block carousel-caption-custome text-dark">
                   <h2>First slide label</h2>
                   <p>
@@ -39,9 +40,9 @@ const Slider = () => {
                 </div>
               </div>
               <div class="carousel-item">
-                <a href="#">
+                <Link to="#">
                   <img src={slider2} class="d-block w-100" alt="..." />
-                </a>
+                </Link>
                 <div class="carousel-caption d-none d-md-block carousel-caption-custome text-dark">
                   <h2>Second slide label</h2>
                   <p>
@@ -57,9 +58,9 @@ const Slider = () => {
                 </div>
               </div>
               <div class="carousel-item">
-                <a href="#">
+                <Link to="#">
                   <img src={slider3} class="d-block w-100" alt="..." />
-                </a>
+                </Link>
                 <div class="carousel-caption d-none d-md-block carousel-caption-custome text-dark">
                   <h2>Third slide label</h2>
                   <p>

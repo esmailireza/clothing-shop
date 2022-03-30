@@ -63,7 +63,7 @@ const ProductPage = () => {
     <Layout>
       {profile.map((pr) => {
         return (
-          <main key={pr.id}>
+          <div key={pr.id} className={styles.section}>
             <div
               key={pr.id}
               className={`d-flex justify-content-center ${styles.customContainer}`}
@@ -126,7 +126,7 @@ const ProductPage = () => {
                 </div>
               </div>
             </div>
-          </main>
+          </div>
         );
       })}
     </Layout>

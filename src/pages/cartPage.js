@@ -20,7 +20,7 @@ const CartPage = () => {
   };
   return (
     <Layout>
-      <main className="container marginMainCart">
+      <div className="container marginMainCart">
         {cartState.cart.length ? (
           <div className=" col-sm-12 d-flex justify-content-between mt-5">
             <section className="col-sm-8 mb-5">
@@ -97,7 +97,7 @@ const CartPage = () => {
             </Link>
           </div>
         )}
-      </main>
+      </div>
     </Layout>
   );
 };

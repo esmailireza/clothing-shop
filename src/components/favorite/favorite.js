@@ -1,4 +1,4 @@
-import "../../components/favorite/favorite.module.css";
+import "../../components/favorite/favorite.css";
 import { Link } from "react-router-dom";
 import { MdOutlineFavoriteBorder } from "react-icons/md";
 import Button from "@mui/material/Button";
@@ -13,7 +13,7 @@ const Favorite = () => {
   /* const favoriteDispatch = useFavoriteActions(); */
 
   return (
-    <main className="container flex-wrap d-flex justify-content-between marginMainCart mb-5">
+    <div className="container flex-wrap d-flex justify-content-between marginMainCart mb-5">
       {favoriteState.favoriteItems.length ? (
         favoriteState.favoriteItems.map((item) => {
           console.log(favoriteState);
@@ -47,7 +47,7 @@ const Favorite = () => {
           </Link>
         </div>
       )}
-    </main>
+    </div>
   );
 };
 

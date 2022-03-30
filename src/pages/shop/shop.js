@@ -18,7 +18,7 @@ const Shop = () => {
   };
   return (
     <Layout>
-      <main class="container" className={styles.customeContainer}>
+      <div class="container" className={styles.customeContainer}>
         <div className="row">
           <div className="d-flex flex-wrap col-sm-12">
             {data.products.map((product) => {
@@ -58,7 +58,7 @@ const Shop = () => {
             })}
           </div>
         </div>
-      </main>
+      </div>
     </Layout>
   );
 };
