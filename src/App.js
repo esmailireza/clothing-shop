@@ -12,6 +12,7 @@ import LoginPage from "./pages/loginPage";
 import FavoritePage from "./pages/favoritePage";
 import ProductPage from "./pages/productPage";
 import FavoriteProvider from "./providers/favoriteProvider";
+import ContactPage from "./pages/contactPage";
 function App() {
   return (
     <Router>
@@ -23,6 +24,7 @@ function App() {
               <Route path="/products/:name" component={ProductPage} />
               <Route path="/cart" component={CartPage} />
               <Route path="/shop" component={Shop} />
+              <Route path="/contact" component={ContactPage} />
               <Route path="/checkout" component={CheckoutPage} />
               <Route path="/loginPage" component={LoginPage} />
               <Route path="/signupPage" component={SignupPage} />
