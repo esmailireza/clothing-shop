@@ -21,9 +21,9 @@ const Footer = () => {
     <footer className={`container-fluid py-4 ${styles.bgFooter} }`}>
       <div className="row">
         <div
-          className={`container ${styles.customeContainer} d-flex justify-content-between`}
+          className={`container ${styles.customeContainer} d-flex justify-content-between flex-wrap`}
         >
-          <section className="col-sm-3">
+          <section className=" col-xs-6">
             <h4 className={`text-white ${styles.titleList}`}>CATEGORIES</h4>
             <ul className={styles.colorList}>
               <li>
@@ -48,7 +48,7 @@ const Footer = () => {
               </li>
             </ul>
           </section>
-          <section className="col-sm-3">
+          <section className="col-xs-6">
             <h4 className={`text-white ${styles.titleList}`}>HELP</h4>
             <ul className={styles.colorList}>
               <li>
@@ -73,7 +73,7 @@ const Footer = () => {
               </li>
             </ul>
           </section>
-          <section className="col-sm-3">
+          <section className="col-xs-6">
             <h4 className={`text-white ${styles.titleList}`}>GET IN TOUCH</h4>
             <p className={styles.thirdSectionParagraph}>
               Any questions? Let us know in store at
@@ -97,7 +97,7 @@ const Footer = () => {
               </li>
             </ul>
           </section>
-          <section className="col-sm-3">
+          <section className="col-xs-6">
             <h4 className={`text-white ${styles.titleList}`}>NEWSLETTER</h4>
             <TextField
               id="standard-textarea"
