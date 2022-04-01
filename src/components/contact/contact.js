@@ -30,7 +30,10 @@ const Contact = () => {
               style={{ resize: "none", height: "7rem" }}
             />
           </div>
-          <button type="submit" class="btn btn-primary d-block w-100">
+          <button
+            type="submit"
+            class="btn btn-primary d-block w-100 rounded-pill"
+          >
             Submit
           </button>
         </form>
