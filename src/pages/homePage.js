@@ -14,13 +14,17 @@ const HomePage = () => {
       <Slider />
       <Categories />
       <SliderWatch />
-      <img src={banner5} className={styles.customeContainer} alt="watch" />
+      {/* <div className="container ">
+        <div className="col-sm-12 text-center">
+          <img src={banner5} alt="watch" />
+        </div>
+      </div> */}
       <SliderShoes />
-      <img
+      {/*  <img
         src={banner3}
         className={styles.customeContainer}
         alt="new collection"
-      />
+      /> */}
       <SliderBag />
     </Layout>
   );
