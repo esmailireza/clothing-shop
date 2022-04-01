@@ -5,7 +5,12 @@ import Input from "../../common/input";
 import styles from "./login.module.css";
 import logo from "../../assets/images/amazon-logo.png";
 import { useHistory } from "react-router-dom";
+import { useState } from "react";
+/* import { MdVisibility } from "react-icons/md";
+import { MdVisibilityOff } from "react-icons/md"; */
+
 const LoginForm = () => {
+  const [showPassword /* setShowPassword */] = useState(false);
   const history = useHistory();
   const onSubmit = (values) => {
     console.log(history);
@@ -46,8 +51,18 @@ const LoginForm = () => {
           label="password"
           name="password"
           formik={formik}
-          type="password"
+          /* type="password" */
+          style={{ position: "relative" }}
+          type={showPassword ? "text" : "password"}
         />
+        {/* <MdVisibilityOff
+          style={{
+            fontSize: "1.6rem",
+            position: "absolute",
+             bottom: "21rem",
+            left: "60rem", 
+          }}
+        /> */}
         <button
           type="submit"
           className={styles.button}
