@@ -1,20 +1,21 @@
-.wrapper {
+/* .wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 2rem;
+} */
+.mainHeight{
+  min-height: 110vh;
 }
 .formContainer {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   border: 1px solid #e0e0e2;
   padding: 2rem;
 }
 .button {
-  padding: 5px 15px;
-  width: 400px;
+  padding: 0.4rem 1rem;
+  width: 100%;
   border: none;
   background-color: #3769da;
   color: white;
@@ -26,11 +27,11 @@
   color: white;
 }
 .headToLogin {
-  width: 400px;
+  width: 100%;
   text-align: left;
 }
 .logoSignup {
-  width: 140px;
+  width: 8rem;
   margin-bottom: 1.5rem;
 }
 .textAlign {
