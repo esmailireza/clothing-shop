@@ -20,13 +20,13 @@ const CartPage = () => {
   };
   return (
     <Layout>
-      <div className="container marginMainCart">
+      <div className="container marginMainCart mt-4">
         {cartState.cart.length ? (
-          <div className=" col-sm-12 d-flex justify-content-between mt-5">
-            <section className="col-sm-8 mb-5">
+          <div className=" col-sm-12 d-flex justify-content-between flex-wrap">
+            <section className="col-sm-12 col-lg-8 mb-5">
               {cartState.cart.map((item) => (
                 <section>
-                  <div key={item.id} className="cartItem mt-4">
+                  <div key={item.id} className="cartItem mb-4">
                     <div className="cartItemDesAndImg">
                       <Link to={`/products/${item.name}`}>
                         <img
@@ -38,34 +38,38 @@ const CartPage = () => {
                       <div className="cartItemDescription">
                         <h2>{item.name}</h2>
                         <p>{item.description}</p>
-                        <div>$ {item.price * item.quantity}</div>
-                      </div>
-                    </div>
-                    <div>
-                      <button
-                        onClick={() => onDecrement(item)}
-                        className={`button ${
-                          item.quantity === 1 && "trashBtn"
-                        }`}
-                      >
-                        {item.quantity > 1 ? "-" : <BiTrash />}
-                      </button>
-                      <span /* className={styles.value} */>
-                        {item.quantity}
-                      </span>
+                        <div className="d-flex justify-content-between align-items-center">
+                          <div className="d-inline">
+                            $ {item.price * item.quantity}
+                          </div>
+                          <div>
+                            <button
+                              onClick={() => onDecrement(item)}
+                              className={`button ${
+                                item.quantity === 1 && "trashBtn"
+                              }`}
+                            >
+                              {item.quantity > 1 ? "-" : <BiTrash />}
+                            </button>
+                            <span /* className={styles.value} */>
+                              {item.quantity}
+                            </span>
 
-                      <button
-                        onClick={() => onIncrement(item)}
-                        className="button increment"
-                      >
-                        +
-                      </button>
+                            <button
+                              onClick={() => onIncrement(item)}
+                              className="button increment"
+                            >
+                              +
+                            </button>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </section>
               ))}
             </section>
-            <section className="col-sm-4 py-4 h-50 bg-light">
+            <section className="col-sm-8 col-lg-4 py-4 h-50 bg-light">
               <h2>price total</h2>
               <p>subTotal: $ {originalTotalPrice}</p>
               <p>
@@ -87,8 +91,8 @@ const CartPage = () => {
             </section>
           </div>
         ) : (
-          <div>
-            <MdAddShoppingCart className="cartEmptyIcon mt-4" />
+          <div className="m-auto marginEmptyCart">
+            <MdAddShoppingCart className="cartEmptyIcon" />
             <h4 className="mt-4">Cart is empty</h4>
             <Link to="/shop" className="text-decoration-none">
               <Button variant="outlined" className="my-5">

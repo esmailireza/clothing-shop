@@ -51,8 +51,16 @@
   color: rgb(236, 68, 68);
   border: 1px solid rgb(236, 68, 68);
 }
+.marginEmptyCart {
+  min-height: 70vh;
+   display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center; 
+}
 .marginMainCart {
-  min-height: 50vh;
+  min-height: 70vh;
+ 
 }
 .cartEmptyIcon {
   font-size: 10rem;
