@@ -16,7 +16,12 @@ const Header = () => {
         <div class="col-sm-12">
           <nav class="navbar navbar-expand-lg navbar-light">
             <NavLink to="/" class="navbar-brand">
-              <img src={logo} width={150} alt="logo" />
+              <img
+                src={logo}
+                width={150}
+                alt="logo"
+                className={styles.imageLogoResponsive}
+              />
             </NavLink>
             <button
               class="navbar-toggler"
@@ -31,7 +36,7 @@ const Header = () => {
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav mr-auto">
+              <ul class="navbar-nav mr-auto col-sm-6">
                 <li>
                   <NavLink
                     to="/"
@@ -62,7 +67,7 @@ const Header = () => {
                 </li>
               </ul>
 
-              <div class="col-4">
+              <div class="col-sm-4">
                 <div class="input-group">
                   <div class="input-group-prepend">
                     <span
@@ -83,24 +88,28 @@ const Header = () => {
                   />
                 </div>
               </div>
-              <div className={styles.divIcon}>
-                <NavLink to="/loginPage">
-                  <MdLogin className={styles.iconFavorite} />
-                </NavLink>
-              </div>
-              <div className={styles.divIcon}>
-                <NavLink to="/favorite">
-                  <MdFavoriteBorder className={styles.iconFavorite} />
-                </NavLink>
-              </div>
+              <div className="col-sm-2 d-flex">
+                <div className={styles.divIcon}>
+                  <NavLink to="/loginPage">
+                    <MdLogin className={styles.iconFavorite} />
+                  </NavLink>
+                </div>
+                <div className={styles.divIcon}>
+                  <NavLink to="/favorite">
+                    <MdFavoriteBorder className={styles.iconFavorite} />
+                  </NavLink>
+                </div>
 
-              <div className={styles.divIcon}>
-                <NavLink to="/cart">
-                  <MdShoppingCart className={styles.iconFavorite} />
-                  <span className={styles.lengthProduct}>
-                    {cartLength.cart.length}
-                  </span>
-                </NavLink>
+                <div className={styles.divIcon}>
+                  <NavLink to="/cart">
+                    <div className={styles.iconShoppingCartSection}>
+                      <MdShoppingCart className={styles.iconFavorite} />
+                      <span className={styles.lengthProduct}>
+                        {cartLength.cart.length}
+                      </span>
+                    </div>
+                  </NavLink>
+                </div>
               </div>
             </div>
           </nav>
