@@ -12,7 +12,7 @@ const Header = () => {
   const cartLength = useCart();
   return (
     <div class="container" className={styles.customeContainer}>
-      <div class="row">
+      <div className={`row ${styles.responsiveHeader}`}>
         <div class="col-sm-12">
           <nav class="navbar navbar-expand-lg navbar-light">
             <NavLink to="/" class="navbar-brand">

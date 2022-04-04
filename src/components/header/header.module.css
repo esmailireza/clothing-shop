@@ -57,3 +57,7 @@
   border-radius: 50%;
   font-size: 0.9rem;
 }
+.responsiveHeader{
+  margin-left: 0;
+  margin-right: 0;
+}
