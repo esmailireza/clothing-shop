@@ -1,20 +1,15 @@
 main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 90vh;
 }
 .formContainer {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   border: 1px solid #e0e0e2;
   padding: 2rem;
 }
 .button {
-  padding: 5px 15px;
-  width: 400px;
+  padding: 0.4rem 1rem;
+  width: 100%;
   border: none;
   background-color: #3769da;
   color: white;
@@ -27,7 +22,7 @@ main {
   color: white;
 }
 .headToSignup {
-  width: 400px;
+  width: 100%;
   text-align: left;
 }
 .formContainer .textAlign {
@@ -36,6 +31,6 @@ main {
   padding-bottom: 1rem;
 }
 .logoLogin {
-  width: 140px;
+  width: 8rem;
   margin-bottom: 1.5rem;
 }

@@ -2,8 +2,8 @@
 .inputForm[type="email"],
 .inputForm[type="tel"],
 .inputForm[type="password"] {
-  width: 400px;
-  padding: 6px 12px;
+  width: 100%;
+  padding: 0.4rem 1rem;
   display: block;
   background-color: #fff;
   color: #444;
@@ -16,18 +16,18 @@
 }
 label {
   display: flex;
-  margin-bottom: 5px;
+  margin-bottom: 0.4rem;
   font-weight: 600;
 }
 
 input + label {
   font-weight: 600;
   display: inline-flex;
-  margin-right: 20px;
-  margin-left: 5px;
+  margin-right: 2rem;
+  margin-left: 0.4rem;
 }
 .formControl {
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
 }
 .error {
   color: red;
