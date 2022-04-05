@@ -66,10 +66,14 @@ const ProductPage = () => {
           <div key={pr.id} className={styles.section}>
             <div
               key={pr.id}
-              className={`d-flex justify-content-center ${styles.customContainer}`}
+              className={`d-flex justify-content-center flex-wrap ${styles.customContainer}`}
             >
-              <img src={pr.image} style={{ width: "400px" }} alt={pr.name} />
-              <div className={styles.textLeft}>
+              <img
+                src={pr.image}
+                alt={pr.name}
+                className={`col-sm-6 col-lg-4 my-3 ${styles.imgResponsive}`}
+              />
+              <div className={`col-sm-10 col-lg-5 my-3 ${styles.textLeft}`}>
                 <h2>{pr.name}</h2>
                 <p>{pr.description}</p>
                 <p className={styles.productPrice}>${pr.price}</p>

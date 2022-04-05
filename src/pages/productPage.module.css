@@ -34,3 +34,11 @@
   background-color: rgba(0, 0, 0, 0.04);
   cursor: pointer;
 }
+/* .imgResponsive{
+  width: 400px;
+} */
+ @media screen and (max-width:767px) {
+  .imgResponsive{
+    width: 350px;
+  }
+}
