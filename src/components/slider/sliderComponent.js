@@ -26,29 +26,26 @@ const Slider = () => {
                 <Link to="#">
                   <img src={slider1} class="d-block w-100" alt="..." />
                 </Link>
-                <div class="carousel-caption d-none d-md-block carousel-caption-custome text-dark">
-                  <h2>First slide label</h2>
-                  <p>
-                    Some representative placeholder content for the first slide.
-                  </p>
-                  <button
-                    type="button"
-                    class="btn btn-primary btn-lg rounded-pill px-4 py-2"
-                  >
-                    SHOP NOW
-                  </button>
+                <div class="carousel-caption d-none d-md-block carousel-caption-custome text-dark text-left">
+                  <h2>Woman Collection</h2>
+                  <p>New Season</p>
+                  <Link to="/shop">
+                    <button
+                      type="button"
+                      class="btn btn-primary btn-lg rounded-pill px-4 py-2"
+                    >
+                      SHOP NOW
+                    </button>
+                  </Link>
                 </div>
               </div>
               <div class="carousel-item">
                 <Link to="#">
                   <img src={slider2} class="d-block w-100" alt="..." />
                 </Link>
-                <div class="carousel-caption d-none d-md-block carousel-caption-custome text-dark">
-                  <h2>Second slide label</h2>
-                  <p>
-                    Some representative placeholder content for the second
-                    slide.
-                  </p>
+                <div class="carousel-caption d-none d-md-block carousel-caption-custome text-dark text-left">
+                  <h2>Man New-Season</h2>
+                  <p>Jackets & Coats</p>
                   <button
                     type="button"
                     class="btn btn-primary btn-lg rounded-pill px-4 py-2"
@@ -61,11 +58,9 @@ const Slider = () => {
                 <Link to="#">
                   <img src={slider3} class="d-block w-100" alt="..." />
                 </Link>
-                <div class="carousel-caption d-none d-md-block carousel-caption-custome text-dark">
-                  <h2>Third slide label</h2>
-                  <p>
-                    Some representative placeholder content for the third slide.
-                  </p>
+                <div class="carousel-caption d-none d-md-block carousel-caption-custome text-dark text-left">
+                  <h2>Man Collection</h2>
+                  <p>New Arrivals</p>
                   <button
                     type="button"
                     class="btn btn-primary btn-lg rounded-pill px-4 py-2"
