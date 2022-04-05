@@ -5,9 +5,9 @@ import { MdPhone } from "react-icons/md";
 const Contact = () => {
   return (
     <div
-      className={`container d-flex justify-content-center align-items-center ${styles.wrapperSection}`}
+      className={`container d-flex justify-content-between align-items-center flex-wrap ${styles.wrapperSection}`}
     >
-      <div className="col-sm-6">
+      <div className="col-sm-10 col-md-6 my-3">
         <form className={styles.formBorder} onClick={(e) => e.preventDefault()}>
           <div class="form-group">
             <h4 className="text-left pb-3 font-weight-bold">
@@ -38,7 +38,7 @@ const Contact = () => {
           </button>
         </form>
       </div>
-      <div className="col-sm-6">
+      <div className="col-sm-10 col-md-6 my-3">
         <div className={styles.rightSection}>
           <div className="d-flex align-items-center">
             <MdLocationOn
