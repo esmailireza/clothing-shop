@@ -5,7 +5,7 @@ import { MdPhone } from "react-icons/md";
 const Contact = () => {
   return (
     <div
-      className={`container d-flex justify-content-between align-items-center flex-wrap ${styles.wrapperSection}`}
+      className={`container d-flex justify-content-between align-items-center flex-wrap-reverse ${styles.wrapperSection}`}
     >
       <div className="col-sm-10 col-md-6 my-3">
         <form className={styles.formBorder} onClick={(e) => e.preventDefault()}>
