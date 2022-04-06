@@ -66,43 +66,42 @@ const Header = () => {
                   </NavLink>
                 </li>
               </ul>
-
-              <div class="col-sm-4">
-                <div class="input-group">
-                  <div class="input-group-prepend d-flex justify-content-center align-items-center">
-                    <span
-                      class="input-group-text"
-                      id="basic-addon1"
-                      className={styles.spanSearchCustome}
-                    >
-                      <MdOutlineSearch />
-                    </span>
-                    <SearchAutocomplete />
-                  </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="input-group">
+                <div class="input-group-prepend d-flex justify-content-center align-items-center">
+                  <span
+                    class="input-group-text"
+                    id="basic-addon1"
+                    className={styles.spanSearchCustome}
+                  >
+                    <MdOutlineSearch />
+                  </span>
+                  <SearchAutocomplete />
                 </div>
               </div>
-              <div className="col-sm-2 d-flex">
-                <div className={styles.divIcon}>
-                  <NavLink to="/loginPage">
-                    <MdLogin className={styles.iconFavorite} />
-                  </NavLink>
-                </div>
-                <div className={styles.divIcon}>
-                  <NavLink to="/favorite">
-                    <MdFavoriteBorder className={styles.iconFavorite} />
-                  </NavLink>
-                </div>
+            </div>
+            <div className="col-sm-2 d-flex justify-content-center">
+              <div className={styles.divIcon}>
+                <NavLink to="/loginPage">
+                  <MdLogin className={styles.iconFavorite} />
+                </NavLink>
+              </div>
+              <div className={styles.divIcon}>
+                <NavLink to="/favorite">
+                  <MdFavoriteBorder className={styles.iconFavorite} />
+                </NavLink>
+              </div>
 
-                <div className={styles.divIcon}>
-                  <NavLink to="/cart">
-                    <div className={styles.iconShoppingCartSection}>
-                      <MdShoppingCart className={styles.iconFavorite} />
-                      <span className={styles.lengthProduct}>
-                        {cartLength.cart.length}
-                      </span>
-                    </div>
-                  </NavLink>
-                </div>
+              <div className={styles.divIcon}>
+                <NavLink to="/cart">
+                  <div className={styles.iconShoppingCartSection}>
+                    <MdShoppingCart className={styles.iconFavorite} />
+                    <span className={styles.lengthProduct}>
+                      {cartLength.cart.length}
+                    </span>
+                  </div>
+                </NavLink>
               </div>
             </div>
           </nav>
