@@ -1,0 +1,6 @@
+.inputCustomize:focus{
+    outline: none;
+}
+.LinkHover:hover{
+    background-color:aliceblue;
+}

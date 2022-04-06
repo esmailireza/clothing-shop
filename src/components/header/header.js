@@ -3,10 +3,10 @@ import { MdFavoriteBorder } from "react-icons/md";
 import { MdLogin } from "react-icons/md";
 import { MdShoppingCart } from "react-icons/md";
 import { MdOutlineSearch } from "react-icons/md";
-
 import styles from "./header.module.css";
 import { NavLink } from "react-router-dom";
 import { useCart } from "../../providers/cartProvider";
+import SearchAutocomplete from "../searchBoxResult/SearchAutocomplete";
 
 const Header = () => {
   const cartLength = useCart();
@@ -69,7 +69,7 @@ const Header = () => {
 
               <div class="col-sm-4">
                 <div class="input-group">
-                  <div class="input-group-prepend">
+                  <div class="input-group-prepend d-flex justify-content-center align-items-center">
                     <span
                       class="input-group-text"
                       id="basic-addon1"
@@ -77,15 +77,8 @@ const Header = () => {
                     >
                       <MdOutlineSearch />
                     </span>
+                    <SearchAutocomplete />
                   </div>
-                  <input
-                    type="text"
-                    class="form-control"
-                    className={styles.inputSearchCustome}
-                    placeholder="Username"
-                    aria-label="Username"
-                    aria-describedby="basic-addon1"
-                  />
                 </div>
               </div>
               <div className="col-sm-2 d-flex">
