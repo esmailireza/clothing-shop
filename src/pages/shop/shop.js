@@ -1,21 +1,8 @@
 import Layout from "../../layout/layout";
 import * as data from "../../data";
 import styles from "./shop.module.css";
-import { useCart, useCartActions } from "../../providers/cartProvider";
-import { CheckInCart } from "../../utils/checkInCart";
-import { toast } from "react-toastify";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 const Shop = () => {
-  const cartCheck = useCart();
-  const dispatch = useCartActions();
-  const addProductHandler = (product) => {
-    /* console.log(product); */
-    toast.success(`${product.name} Added to cart`, {
-      position: "top-center",
-      autoClose: 3000,
-    });
-    dispatch({ type: "ADD_TO_CART", payload: product });
-  };
   return (
     <Layout>
       <div className={styles.customeContainer}>
@@ -39,15 +26,6 @@ const Shop = () => {
                 <div className="d-flex justify-content-between align-items-center">
                   <span className="font-weight-bold">price</span>
                   <span className="font-weight-bold">$ {product.price}</span>
-                  {/* <button
-                    onClick={() => addProductHandler(product)}
-                    href="#"
-                    className="btn btn-primary"
-                  >
-                    {CheckInCart(cartCheck.cart, product)
-                      ? "In cart"
-                      : "Add To Cart"}
-                  </button> */}
                 </div>
               </div>
             </Link>
