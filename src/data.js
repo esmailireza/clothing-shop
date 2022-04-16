@@ -4,7 +4,6 @@ import bagProduct3 from "./assets/images/products/bags/bag-product-03.webp";
 import bagProduct4 from "./assets/images/products/bags/bag-product-04.webp";
 import bagProduct5 from "./assets/images/products/bags/bag-product-05.webp";
 import manProduct1 from "./assets/images/products/men/man-product-01.jpg";
-import manProduct2 from "./assets/images/products/men/man-product-02.jpg";
 import manProduct3 from "./assets/images/products/men/man-product-03.jpg";
 import manProduct4 from "./assets/images/products/men/man-product-04.jpg";
 import manProduct5 from "./assets/images/products/men/man-product-05.png";
@@ -93,16 +92,6 @@ export const products = [
     image: manProduct1,
     price: 110,
     offPrice: 110,
-    discount: 0,
-    type: "man",
-  },
-  {
-    id: "man_product_2",
-    name: "Herschel Supply",
-    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-    image: manProduct2,
-    price: 95,
-    offPrice: 95,
     discount: 0,
     type: "man",
   },
