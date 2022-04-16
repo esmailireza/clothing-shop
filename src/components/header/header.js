@@ -83,18 +83,18 @@ const Header = () => {
             </div>
             <div className="col-sm-2 d-flex justify-content-center">
               <div className={styles.divIcon}>
-                <NavLink to="/loginPage">
+                <NavLink to="/loginPage" className="text-reset">
                   <MdLogin className={styles.iconFavorite} />
                 </NavLink>
               </div>
               <div className={styles.divIcon}>
-                <NavLink to="/favorite">
+                <NavLink to="/favorite" className="text-reset">
                   <MdFavoriteBorder className={styles.iconFavorite} />
                 </NavLink>
               </div>
 
               <div className={styles.divIcon}>
-                <NavLink to="/cart">
+                <NavLink to="/cart" className="text-reset">
                   <div className={styles.iconShoppingCartSection}>
                     <MdShoppingCart className={styles.iconFavorite} />
                     <span className={styles.lengthProduct}>
