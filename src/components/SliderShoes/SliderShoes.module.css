@@ -7,6 +7,17 @@
   margin-bottom: 1rem;
   border: 2px solid red;
 } */
+.customeTitleContainer {
+  max-width: 1275px;
+  margin: auto;
+}
+.borderBottomTitle{
+  width: 15%;
+  border: 1px solid blue;
+}
+.fontSizeTitle{
+  font-size: 1.8rem;
+}
 .cardImage {
   height: 350px;
 }
@@ -15,4 +26,26 @@
   padding-right: 0;
   padding-left: 0;
   margin: 1rem;
+}
+
+@media screen and (max-width:425px){
+  .borderBottomTitle{
+    width: 35%;
+  }
+  .fontSizeTitle{
+    font-size: 1.4rem;
+  }
+}
+ @media screen and (min-width:425px) and (max-width:768px){
+  .fontSizeTitle{
+    font-size: 1.6rem;
+  }
+}
+ @media screen and (max-width:1338px){
+  .fontSizeTitle{
+    margin-left: 1rem;
+  }
+  .borderBottomTitle{
+    margin-left: 1rem;
+  }
 }

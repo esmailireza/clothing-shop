@@ -27,6 +27,12 @@ const SliderShoes = () => {
   };
   return (
     <div className="container-fluid bg-light pt-4 pb-4 my-5">
+      <div className={styles.customeTitleContainer}>
+        <h3 className={`text-left font-weight-bolder ${styles.fontSizeTitle}`}>
+          shoes
+        </h3>
+        <div className={styles.borderBottomTitle}></div>
+      </div>
       <Carousel
         responsive={responsive}
         className={`${styles.customeContainer} card-deck`}
