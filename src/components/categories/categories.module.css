@@ -4,6 +4,7 @@
 }
 .categoryHover {
   border-bottom: 4px solid white;
+  transition: all 0.4s ease-in;
 }
 .categoryHover:hover {
   border-bottom: 4px solid #1976d2;
