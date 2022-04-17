@@ -13,27 +13,31 @@ import FavoritePage from "./pages/favoritePage";
 import ProductPage from "./pages/productPage";
 import FavoriteProvider from "./providers/favoriteProvider";
 import ContactPage from "./pages/contactPage";
+import ScrollToTop from "./components/ScrollToTop";
+
 function App() {
   return (
     <Router>
-      <CartProvider>
-        <FavoriteProvider>
-          <ToastContainer />
-          <div className="App">
-            <Switch>
-              <Route path="/products/:name" component={ProductPage} />
-              <Route path="/cart" component={CartPage} />
-              <Route path="/shop" component={Shop} />
-              <Route path="/contact" component={ContactPage} />
-              <Route path="/checkout" component={CheckoutPage} />
-              <Route path="/loginPage" component={LoginPage} />
-              <Route path="/signupPage" component={SignupPage} />
-              <Route path="/favorite" component={FavoritePage} />
-              <Route path="/" exact={true} component={HomePage} />
-            </Switch>
-          </div>
-        </FavoriteProvider>
-      </CartProvider>
+      <ScrollToTop>
+        <CartProvider>
+          <FavoriteProvider>
+            <ToastContainer />
+            <div className="App">
+              <Switch>
+                <Route path="/products/:name" component={ProductPage} />
+                <Route path="/cart" component={CartPage} />
+                <Route path="/shop" component={Shop} />
+                <Route path="/contact" component={ContactPage} />
+                <Route path="/checkout" component={CheckoutPage} />
+                <Route path="/loginPage" component={LoginPage} />
+                <Route path="/signupPage" component={SignupPage} />
+                <Route path="/favorite" component={FavoritePage} />
+                <Route path="/" exact={true} component={HomePage} />
+              </Switch>
+            </div>
+          </FavoriteProvider>
+        </CartProvider>
+      </ScrollToTop>
     </Router>
   );
 }
