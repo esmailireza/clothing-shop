@@ -1,5 +1,10 @@
-.customeContainer {
-  /*   max-width: 1275px;
- */ /* margin: auto; */
+/* .customeContainer {
+max-width: 1275px;
+margin: auto;
   cursor: pointer;
+}
+ */
+.bannerImgSiza{
+  max-width:81%;
+ 
 }

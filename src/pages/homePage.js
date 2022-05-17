@@ -5,26 +5,28 @@ import Slider from "../components/slider/sliderComponent";
 import SliderBag from "../components/SliderBag/SliderBag";
 import SliderWatch from "../components/SliderWatch/SliderWatch";
 import SliderShoes from "../components/SliderShoes/SliderShoes";
-/* import styles from "./homePage.module.css";
+import styles from "./homePage.module.css";
 import banner5 from "../assets/images/bannerImages/banner5.jpeg";
-import banner3 from "../assets/images/bannerImages/banner3.jpg"; */
+import banner3 from "../assets/images/bannerImages/banner3.jpg";
 const HomePage = () => {
   return (
     <Layout>
       <Slider />
       <Categories />
       <SliderWatch />
-      {/* <div className="container ">
-        <div className="col-sm-12 text-center">
-          <img src={banner5} alt="watch" />
-        </div>
-      </div> */}
+
+      <img
+        src={banner5}
+        alt="watch"
+        className={`img-fluid ${styles.bannerImgSiza}`}
+      />
+
       <SliderShoes />
-      {/*  <img
+      <img
         src={banner3}
-        className={styles.customeContainer}
+        className={`img-fluid ${styles.bannerImgSiza}`}
         alt="new collection"
-      /> */}
+      />
       <SliderBag />
     </Layout>
   );
