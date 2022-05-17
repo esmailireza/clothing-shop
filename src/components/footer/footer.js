@@ -27,22 +27,34 @@ const Footer = () => {
             <h4 className={`text-white ${styles.titleList}`}>CATEGORIES</h4>
             <ul className={styles.colorList}>
               <li>
-                <Link to="" className="text-reset text-decoration-none">
+                <Link
+                  to=""
+                  className={`text-reset text-decoration-none ${styles.item}`}
+                >
                   Women
                 </Link>
               </li>
               <li>
-                <Link to="" className="text-reset text-decoration-none">
+                <Link
+                  to=""
+                  className={`text-reset text-decoration-none ${styles.item}`}
+                >
                   Men
                 </Link>
               </li>
               <li>
-                <Link to="" className="text-reset text-decoration-none">
+                <Link
+                  to=""
+                  className={`text-reset text-decoration-none ${styles.item}`}
+                >
                   Shoes
                 </Link>
               </li>
               <li>
-                <Link to="" className="text-reset text-decoration-none">
+                <Link
+                  to=""
+                  className={`text-reset text-decoration-none ${styles.item}`}
+                >
                   Watches
                 </Link>
               </li>
@@ -52,22 +64,34 @@ const Footer = () => {
             <h4 className={`text-white ${styles.titleList}`}>HELP</h4>
             <ul className={styles.colorList}>
               <li>
-                <Link to="" className="text-reset text-decoration-none">
+                <Link
+                  to=""
+                  className={`text-reset text-decoration-none ${styles.item}`}
+                >
                   Track Order
                 </Link>
               </li>
               <li>
-                <Link to="" className="text-reset text-decoration-none">
+                <Link
+                  to=""
+                  className={`text-reset text-decoration-none ${styles.item}`}
+                >
                   Returns
                 </Link>
               </li>
               <li>
-                <Link to="" className="text-reset text-decoration-none">
+                <Link
+                  to=""
+                  className={`text-reset text-decoration-none ${styles.item}`}
+                >
                   Shipping
                 </Link>
               </li>
               <li>
-                <Link to="" className="text-reset text-decoration-none">
+                <Link
+                  to=""
+                  className={`text-reset text-decoration-none ${styles.item}`}
+                >
                   FAQs
                 </Link>
               </li>
@@ -83,17 +107,27 @@ const Footer = () => {
             <ul className={`d-flex ${styles.colorList}`}>
               <li>
                 <FaFacebookSquare
+                  className={styles.item}
                   style={{ fontSize: "1.4rem", margin: "0.6rem" }}
                 />
               </li>
               <li>
-                <FaInstagram style={{ fontSize: "1.4rem", margin: "0.6rem" }} />
+                <FaInstagram
+                  className={styles.item}
+                  style={{ fontSize: "1.4rem", margin: "0.6rem" }}
+                />
               </li>
               <li>
-                <FaLinkedin style={{ fontSize: "1.4rem", margin: "0.6rem" }} />
+                <FaLinkedin
+                  className={styles.item}
+                  style={{ fontSize: "1.4rem", margin: "0.6rem" }}
+                />
               </li>
               <li>
-                <FaTwitter style={{ fontSize: "1.4rem", margin: "0.6rem" }} />
+                <FaTwitter
+                  className={styles.item}
+                  style={{ fontSize: "1.4rem", margin: "0.6rem" }}
+                />
               </li>
             </ul>
           </section>

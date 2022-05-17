@@ -9,6 +9,10 @@
   color: #b2b2b2;
   text-align: left;
 }
+.item:hover {
+  color: #6f9cc8 !important;
+  cursor: pointer;
+}
 .titleList {
   font-size: 17px;
   text-align: left;
