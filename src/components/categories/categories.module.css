@@ -8,12 +8,13 @@
 }
 .categoryHover:hover {
   border-bottom: 4px solid #1976d2;
+  color: #1976d2;
 }
 .descCategory {
   top: 25px;
   left: 30px;
 }
-.responsiveCategories{
+.responsiveCategories {
   margin-left: 0;
   margin-right: 0;
 }
