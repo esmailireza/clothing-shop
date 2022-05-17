@@ -31,7 +31,6 @@ const SliderBag = () => {
         <h3 className={`text-left font-weight-bolder ${styles.fontSizeTitle}`}>
           bags
         </h3>
-        <div className={styles.borderBottomTitle}></div>
       </div>
       <Carousel
         responsive={responsive}

@@ -29,7 +29,6 @@ const SliderWatch = () => {
         <h3 className={`text-left font-weight-bolder ${styles.fontSizeTitle}`}>
           watches
         </h3>
-        <div className={styles.borderBottomTitle}></div>
       </div>
       <Carousel
         responsive={responsive}

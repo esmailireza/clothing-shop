@@ -31,7 +31,6 @@ const SliderShoes = () => {
         <h3 className={`text-left font-weight-bolder ${styles.fontSizeTitle}`}>
           shoes
         </h3>
-        <div className={styles.borderBottomTitle}></div>
       </div>
       <Carousel
         responsive={responsive}
